@@ -10,6 +10,8 @@ const transporter = nodemailer.createTransport({
 
 /**
  * Sends an OTP email to the given address.
+ * @param {string} email
+ * @param {string} otp
  */
 async function sendOtpEmail(email, otp) {
   await transporter.sendMail({

@@ -1,6 +1,7 @@
 require('dotenv').config();
 const { PrismaClient } = require('@prisma/client');
 
+/** @type {typeof globalThis & { prisma?: import('@prisma/client').PrismaClient }} */
 const globalForPrisma = globalThis;
 
 const prisma = globalForPrisma.prisma ?? new PrismaClient();
